@@ -9,12 +9,26 @@ namespace Laboratoire_1.Controllers
 {
     public class NouvellesController : Controller
     {
-        private NouvellesDbEntities DB = new NouvellesDbEntities();
+        private readonly NouvellesDbEntities DB = new NouvellesDbEntities();
 
-        // GET: Nouvelles
         public ActionResult Index()
         {
             return View(DB.Nouvelles);
         }
+
+        public ActionResult Create ()
+        {
+            return View(new Nouvelle());
+        }
+
+        [HttpPost]
+        public ActionResult Create (Nouvelle nouvelle)
+        {
+            if (ModelState.IsValid)
+                DB.AddNouvelle(nouvelle);
+
+            return RedirectToAction("Index");
+        }
+
     }
 }

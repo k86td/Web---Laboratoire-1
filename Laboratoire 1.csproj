@@ -133,6 +133,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DAL.cs" />
     <Compile Include="Models\Nouvelle.cs">
       <DependentUpon>NouvellesDbModel.tt</DependentUpon>
     </Compile>
@@ -212,6 +213,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Nouvelles\Index.cshtml" />
+    <Content Include="Views\Nouvelles\Create.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
