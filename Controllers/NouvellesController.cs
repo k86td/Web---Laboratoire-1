@@ -44,5 +44,25 @@ namespace Laboratoire_1.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Delete (int id)
+        {
+            Nouvelle nouvelle = DB.Nouvelles.Find(id);
+            return View(nouvelle);
+        }
+
+        [HttpPost]
+        public ActionResult Delete (Nouvelle nouvelle)
+        {
+            DB.RemoveNouvelle(nouvelle);
+            DB.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Details (int id)
+        {
+            Nouvelle nouvelle = DB.Nouvelles.Find(id);
+            return View(nouvelle);
+        }
+
     }
 }

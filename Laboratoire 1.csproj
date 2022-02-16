@@ -215,6 +215,8 @@
     <Content Include="Views\Nouvelles\Create.cshtml" />
     <Content Include="Views\Nouvelles\_NouvellesForm.cshtml" />
     <Content Include="Views\Nouvelles\Edit.cshtml" />
+    <Content Include="Views\Nouvelles\Delete.cshtml" />
+    <Content Include="Views\Nouvelles\Details.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

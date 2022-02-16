@@ -1,0 +1,56 @@
+﻿@model Laboratoire_1.Models.Nouvelle
+
+@{
+    ViewBag.Title = "Supprimer";
+}
+
+<h2>Supprimer</h2>
+
+<h3>Voulez-vous vraiment supprimer cet élément?</h3>
+<div>
+    <h4>Nouvelle</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Titre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateAjout)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateAjout)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Texte)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Texte)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageUrl)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Retour à la liste", "Index")
+        </div>
+    }
+</div>
