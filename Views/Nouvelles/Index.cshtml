@@ -26,7 +26,10 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model)
+{
+    string currentUrl = item.ImageUrl;
+
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Titre)
@@ -38,7 +41,7 @@
             @Html.DisplayFor(modelItem => item.Texte)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ImageUrl)
+            <img src="@currentUrl" class="img-thumbnail"/>
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
