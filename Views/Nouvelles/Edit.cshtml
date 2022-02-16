@@ -1,0 +1,18 @@
+﻿@model Laboratoire_1.Models.Nouvelle
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Modifier</h2>
+
+
+@Html.Partial("_NouvellesForm")
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

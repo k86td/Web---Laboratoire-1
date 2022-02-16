@@ -30,5 +30,19 @@ namespace Laboratoire_1.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Edit (int id)
+        {
+            Nouvelle nouvelle = DB.Nouvelles.Find(id);
+            return View(nouvelle);
+        }
+
+        [HttpPost]
+        public ActionResult Edit (Nouvelle nouvelle)
+        {
+            DB.UpdateNouvelle(nouvelle);
+            DB.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
     }
 }
