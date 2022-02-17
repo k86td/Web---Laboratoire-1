@@ -13,7 +13,7 @@ namespace Laboratoire_1.Controllers
 
         public ActionResult Index()
         {
-            return View(DB.Nouvelles);
+            return View(DB.Nouvelles.OrderByDescending(val => val.DateAjout));
         }
 
         public ActionResult Create ()
